@@ -1,0 +1,76 @@
+@use 'sass:map';
+@font-face {
+    font-family: 'MostraNuova';
+    src: url('./fonts/mostranuova5.woff2') format('woff2'), url('./fonts/mostranuova5.woff') format('woff');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'MostraNuova2';
+    src: url('./fonts/mostranuova2.woff2') format('woff2'), url('./fonts/mostranuova2.woff') format('woff');
+    font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'header';
+
+:root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --foreground-rgb: 255, 255, 255;
+        --background-start-rgb: 0, 0, 0;
+        --background-end-rgb: 0, 0, 0;
+    }
+}
+
+body {
+    --primary: #f2ad0d;
+    --secondary: hsl(208deg 88% 7%);
+    --text-color: #92b0ca;
+    --text-font: 'MostraNuova', sans-serif;
+    --title-font: 'MostraNuova2', sans-serif;
+    font-family: var(--text-font);
+    font-size: 19px;
+    color: var(--text-color);
+    min-height: 100dvh;
+    background: linear-gradient(to bottom, var(--secondary), black) var(--secondary);
+    // background-color: var(--secondary);
+}
+h1,
+h2,
+h3 {
+    color: white;
+    font-family: var(--title-font);
+}
+h1 {
+    font-size: clamp(38px, 28px + 2vw, 50px);
+    line-height: 1;
+    margin-bottom: 2rem;
+}
+h2 {
+    font-size: clamp(30px, 25px + 2vw, 40px);
+    line-height: 1.1;
+    margin-bottom: 1.75rem;
+}
+h3 {
+    font-size: clamp(25px, 20px + 2vw, 30px);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+p {
+    margin-bottom: 1rem;
+}
+a {
+    color: white;
+    font-weight: 600;
+    &:hover {
+        color: var(--primary);
+    }
+}
