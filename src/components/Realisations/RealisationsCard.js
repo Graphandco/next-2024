@@ -1,4 +1,3 @@
-'use client';
 import Image from 'next/image';
 import React from 'react';
 
@@ -9,8 +8,10 @@ export const RealisationsCard = ({ realisation }) => {
     const coverHeight = realisation.fields.cover.fields.file.details.image.height;
     return (
         <article>
-            <span>{title}</span>
-            <Image src={coverURL} width={coverWidth} height={coverHeight} alt={`${title} cover`} />
+            <div className="realisation-image">
+                <Image src={coverURL} width={coverWidth} height={coverHeight} alt={`${title} cover`} priority />
+            </div>
+            <div className="realisation-title">{title}</div>
         </article>
     );
 };

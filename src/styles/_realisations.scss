@@ -1,0 +1,18 @@
+.realisations-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+article {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    min-height: 200px;
+    .realisation-title {
+        color: var(--primary);
+    }
+    .realisation-image {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+    }
+}
