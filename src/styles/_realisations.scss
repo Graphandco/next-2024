@@ -1,18 +1,145 @@
+.realisations-header {
+    display: grid;
+    padding-bottom: 1rem;
+    grid-template-columns: 1fr 380px;
+    align-items: center;
+    position: relative;
+    @include mq(mobile) {
+        grid-template-columns: 1fr;
+    }
+}
 .realisations-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+        'loide loide bomot holamate'
+        'loide loide exotique holamate'
+        'burgerio boatman willow willow'
+        'troisfp troisfp fylo barber';
+    grid-gap: 1rem;
+    gap: 1rem;
+
+    @include mq(tablet) {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-areas:
+            'loide loide bomot'
+            'loide loide holamate'
+            'exotique willow willow'
+            'boatman boatman burgerio'
+            'barber fylo troisfp';
+    }
+    @include mq(mobile) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-areas:
+            'loide bomot'
+            'loide holamate'
+            'exotique holamate'
+            'willow burgerio'
+            'boatman troisfp'
+            'barber troisfp'
+            'fylo fylo';
+    }
+
+    .loide-guitare {
+        grid-area: loide;
+    }
+    .boatman {
+        grid-area: boatman;
+    }
+    .peche-exotique {
+        grid-area: exotique;
+    }
+    .willow-tarot {
+        grid-area: willow;
+    }
+    .hola-mate {
+        grid-area: holamate;
+    }
+    .trois-frontieres-peche {
+        grid-area: troisfp;
+    }
+    .burgerio {
+        grid-area: burgerio;
+    }
+    .fylo {
+        grid-area: fylo;
+    }
+    .barber-shop {
+        grid-area: barber;
+    }
+    .bomot {
+        grid-area: bomot;
+    }
 }
-article {
+.realisation-card {
     position: relative;
     isolation: isolate;
     overflow: hidden;
     min-height: 200px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 10px;
     .realisation-title {
-        color: var(--primary);
+        font-weight: 400;
+        font-size: 22px;
+        position: relative;
+        color: white !important;
+        &:before {
+            content: '';
+            display: inline-block;
+            margin-right: 5px;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            z-index: -1;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary);
+            z-index: -1;
+        }
     }
     .realisation-image {
         position: absolute;
         inset: 0;
         z-index: -1;
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100px;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(transparent, black);
+            opacity: 0.5;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-color: #1e394d;
+            mix-blend-mode: multiply;
+            mix-blend-mode: hard-light;
+            opacity: 0.9;
+            pointer-events: none;
+            transition: 0.3s;
+        }
+        &:hover:after {
+            opacity: 0.2;
+        }
     }
 }

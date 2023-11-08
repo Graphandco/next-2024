@@ -57,8 +57,8 @@ export default function Button({ children, secondary, ...attributes }) {
 
 const CustomButton = styled.div`
     border-radius: 3em;
-    border: ${(props) => (props.secondary ? '2px solid var(--primary)' : 'none')};
-    background-color: ${(props) => (props.secondary ? 'transparent' : 'var(--primary)')};
+    border: ${(props) => (props.secondary ? '2px solid var(--secondary)' : 'none')};
+    background-color: ${(props) => (props.secondary ? 'var(--secondary)' : 'var(--primary)')};
     cursor: pointer;
     position: relative;
     display: flex;

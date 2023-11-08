@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import React from 'react';
+import Link from 'next/link';
 
 export const RealisationsCard = ({ realisation }) => {
     const { title, slug, logo, cover, featured, description } = realisation.fields;
@@ -7,11 +7,13 @@ export const RealisationsCard = ({ realisation }) => {
     const coverWidth = realisation.fields.cover.fields.file.details.image.width;
     const coverHeight = realisation.fields.cover.fields.file.details.image.height;
     return (
-        <article>
-            <div className="realisation-image">
-                <Image src={coverURL} width={coverWidth} height={coverHeight} alt={`${title} cover`} priority />
-            </div>
-            <div className="realisation-title">{title}</div>
+        <article className={`realisation-card ${slug}`}>
+            <Link href={`realisations/${slug}`}>
+                <div className="realisation-image">
+                    <Image src={coverURL} width={coverWidth} height={coverHeight} alt={`${title} cover`} priority />
+                </div>
+                <div className="realisation-title">{title}</div>
+            </Link>
         </article>
     );
 };
