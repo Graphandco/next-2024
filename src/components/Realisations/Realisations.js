@@ -6,7 +6,11 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 export const Realisations = ({ realisations, realisationsText }) => {
     return (
         <section id="realisations">
-            <h1 className="container">Réalisations</h1>
+            <div className="container">
+                <h1>
+                    <span>Réalisations</span>
+                </h1>
+            </div>
             <div className="realisations-header">
                 <div className="realisations-description bg-white/5 p-5">{documentToReactComponents(realisationsText.fields.content)}</div>
                 <div className="realisations-cta bg-primary h-full flex flex-col justify-center items-center p-5">

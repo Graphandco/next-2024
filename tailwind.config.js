@@ -9,8 +9,19 @@ module.exports = {
         './src/**/*.{js,ts,jsx,tsx,mdx}',
     ],
     theme: {
+        screens: {
+            sm: '767px',
+            // => @media (min-width: 640px) { ... }
+
+            md: '1024px',
+            // => @media (min-width: 1024px) { ... }
+
+            desktop: '1280px',
+            // => @media (min-width: 1280px) { ... }
+        },
         fontFamily: {
-            title: ['"Belanosima"', 'sans-serif'],
+            text: 'var(--text-font)',
+            title: 'var(--title-font)',
         },
         container: {
             center: true,

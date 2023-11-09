@@ -1,7 +1,11 @@
 const Prestations = () => {
     return (
         <section id="prestations">
-            <h1>Prestations</h1>
+            <div className="container">
+                <h1>
+                    <span>Prestations</span>
+                </h1>
+            </div>
         </section>
     );
 };

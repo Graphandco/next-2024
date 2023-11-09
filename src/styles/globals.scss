@@ -64,10 +64,66 @@ h3 {
     color: white;
     font-family: var(--title-font);
 }
+// h1 {
+//     font-size: clamp(38px, 28px + 2vw, 50px);
+//     line-height: 1;
+//     margin-bottom: 2rem;
+//     position: relative;
+//     display: inline-block;
+//     &:before,
+//     &:after {
+//         content: '';
+//         position: absolute;
+//         width: 100%;
+//         left: 0;
+//         height: 5px;
+//         border-top: 1px solid var(--primary);
+//         top: -5px;
+//     }
+//     &:after {
+//         top: auto;
+//         bottom: -5px;
+//     }
+// }
 h1 {
+    text-transform: uppercase;
+    display: inline-block;
     font-size: clamp(38px, 28px + 2vw, 50px);
-    line-height: 1;
-    margin-bottom: 2rem;
+    padding-block: 2rem;
+
+    span {
+        letter-spacing: 0.15rem;
+        display: block;
+        margin: 0 auto;
+        text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
+
+        /* Clip Background Image */
+
+        background: url(bg-h1.png) repeat-y;
+        -webkit-background-clip: text;
+        background-clip: text;
+
+        /* Animate Background Image */
+
+        -webkit-text-fill-color: transparent;
+        -webkit-animation: aitf 80s linear infinite;
+
+        /* Activate hardware acceleration for smoother animations */
+
+        -webkit-transform: translate3d(0, 0, 0);
+        -webkit-backface-visibility: hidden;
+    }
+}
+
+/* Animate Background Image */
+
+@keyframes aitf {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
 }
 h2 {
     font-size: clamp(30px, 25px + 2vw, 40px);

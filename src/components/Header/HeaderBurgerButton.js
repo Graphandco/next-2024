@@ -32,7 +32,7 @@ export const HeaderBurgerButton = ({ isActive, setIsActive }) => {
     }, []);
 
     return (
-        <div ref={buttonRef} className={`header-burger ${isActive ? 'header-burger-active' : ''}`}>
+        <div ref={buttonRef} className={`header-burger sm:hidden  ${isActive ? 'header-burger-active' : ''}`}>
             <div
                 onClick={() => {
                     setIsActive(!isActive);
