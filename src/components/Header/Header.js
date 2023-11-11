@@ -18,7 +18,7 @@ export const Header = () => {
     //     target: logoRef,
     //     offset: ['0 1' /*starts bottom of viewport crosses top of element*/, '1.33 1'],
     // });
-    const logoWidth = scrollPosition > 100 ? '30px' : '50px';
+    const logoWidth = scrollPosition > 100 ? '30px' : '40px';
     const logoFontSize = scrollPosition > 100 ? '18px' : '23px';
 
     const pathname = usePathname();
@@ -48,7 +48,7 @@ export const Header = () => {
     // console.log(scrollPosition);
 
     return (
-        <motion.header className="sticky top-0 z-50">
+        <motion.header className="sticky top-0 z-50 overflow-hidden w-full">
             <div className="header-overlay" style={{ opacity: dynamicOpacity }}></div>
             <div className="header-wrapper container flex justify-between items-center py-3">
                 <div className="header-logo flex items-center gap-2">

@@ -90,28 +90,39 @@ h1 {
     display: inline-block;
     font-size: clamp(38px, 28px + 2vw, 50px);
     padding-block: 2rem;
+    padding-left: 1rem;
+    position: relative;
 
     span {
         letter-spacing: 0.15rem;
         display: block;
         margin: 0 auto;
         text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
+        line-height: 1.1;
 
         /* Clip Background Image */
-
         background: url(bg-h1.png) repeat-y;
         -webkit-background-clip: text;
         background-clip: text;
 
         /* Animate Background Image */
-
         -webkit-text-fill-color: transparent;
         -webkit-animation: aitf 80s linear infinite;
 
         /* Activate hardware acceleration for smoother animations */
-
         -webkit-transform: translate3d(0, 0, 0);
         -webkit-backface-visibility: hidden;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: 40px;
+        left: 0;
+        width: 10px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background-color: var(--primary);
     }
 }
 
