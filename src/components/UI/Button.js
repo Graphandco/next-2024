@@ -64,7 +64,9 @@ const CustomButton = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 15px 60px 15px 60px;
+    padding: 15px 50px 15px 50px;
+    padding-block: clamp(10px, 5px + 0.9vw, 15px);
+    padding-inline: clamp(30px, 15px + 2.5vw, 50px);
     width: fit-content;
     overflow: hidden;
 
@@ -77,6 +79,7 @@ const CustomButton = styled.div`
         transition: color 0.4s linear;
         font-weight: 600;
         text-transform: uppercase;
+        font-size: clamp(16px, 0.8vw + 10px, 19px);
     }
 
     &:hover {
