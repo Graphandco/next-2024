@@ -6,9 +6,10 @@ import { motion } from 'framer-motion';
 
 export const HomeHero = () => {
     const rocket = {
-        type: 'spring',
-        damping: 15,
-        stiffness: 200,
+        // type: 'spring',
+        // damping: 15,
+        // stiffness: 200,
+        duration: 1,
         delay: 0.3,
     };
     const content = {

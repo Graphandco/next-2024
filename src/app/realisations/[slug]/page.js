@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 
 const RealisationPage = async ({ params }) => {
     const realisation = await client.getEntries({ content_type: 'realisations', 'fields.slug[in]': params.slug });
+
     if (!realisation.items.length) {
         return notFound();
     }

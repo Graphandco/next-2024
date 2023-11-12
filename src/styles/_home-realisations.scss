@@ -1,0 +1,108 @@
+.home-realisations {
+    background-color: var(--secondary);
+    padding-block: 5rem;
+}
+.projects {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 2rem;
+
+    .realisations-list {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        @include mq(mobile) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .modal-container {
+        height: 300px;
+        width: 400px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        // background-color: white;
+        pointer-events: none;
+        overflow: hidden;
+        z-index: 3;
+    }
+
+    .modal-slider {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        transition: top 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+    }
+
+    .modal {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 25px;
+    }
+
+    .modal img {
+        height: auto;
+        width: auto;
+    }
+
+    .cursor,
+    .cursor-label {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background-color: var(--primary);
+        color: var(--secondary);
+        position: fixed;
+        z-index: 3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        font-weight: 300;
+        pointer-events: none;
+    }
+    .cursorLabel {
+        background-color: transparent;
+    }
+}
+.home-project-item {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    background-color: rgba(white, 0.05);
+    border-left: 8px solid var(--primary);
+    // cursor: pointer;
+    transition: all 0.2s;
+
+    h2 {
+        font-size: clamp(30px, 20px + 3vw, 50px);
+        margin: 0px;
+        font-weight: 400;
+        transition: all 0.4s;
+    }
+
+    p {
+        transition: all 0.4s;
+        font-weight: 300;
+        color: var(--text-color);
+    }
+
+    &:hover {
+        opacity: 0.5;
+
+        h2 {
+            transform: translateX(-10px);
+        }
+
+        p {
+            transform: translateX(10px);
+        }
+    }
+}

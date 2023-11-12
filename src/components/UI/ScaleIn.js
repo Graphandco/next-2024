@@ -8,10 +8,11 @@ export const ScaleIn = ({ children }) => {
         target: targetRef,
         offset: ['0 1', '1.33 1'],
     });
-    const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.7, 1]);
-    const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+    const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.9, 1]);
+    const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.4, 1]);
     return (
         <motion.div
+            className="flex"
             ref={targetRef}
             style={{
                 scale: scaleProgress,
