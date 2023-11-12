@@ -7,7 +7,7 @@ export const HeaderNav = ({ navItems }) => {
     const pathname = usePathname();
 
     return (
-        <nav className="invisible sm:visible">
+        <nav className="hidden sm:block">
             <ul className="flex justify-end gap-5">
                 {navItems.map((link, index) => (
                     <Magnetic key={index}>

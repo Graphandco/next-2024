@@ -32,16 +32,21 @@ export const HeaderBurgerButton = ({ isActive, setIsActive }) => {
     }, []);
 
     return (
-        <div ref={buttonRef} className={`header-burger sm:hidden  ${isActive ? 'header-burger-active' : ''}`}>
-            <div
-                onClick={() => {
-                    setIsActive(!isActive);
-                }}
-                className="header-burger-button"
-                // backgroundColor="white"
-            >
-                <div className={`header-burger-bars ${isActive ? 'burger-active' : ''}`}></div>
-            </div>
+        <div
+            ref={buttonRef}
+            className={`header-burger sm:hidden scale-[0.7]  ${isActive ? 'open' : 'close'}`}
+            onClick={() => {
+                setIsActive(!isActive);
+            }}
+        >
+            <div class="line line-top"></div>
+            <div class="line line-middle"></div>
+            <div class="line line-bottom"></div>
+            {/* <svg fill="var(--secondary)" class="hamburger-svg" viewBox="0 0 100 100" width="35">
+                <rect class="line top" width="12" height="2" x="9" y="8" rx="1"></rect>
+                <rect class="line middle" width="12" height="2" x="9" y="13" rx="1"></rect>
+                <rect class="line bottom" width="12" height="2" x="9" y="18" rx="1"></rect>
+            </svg> */}
         </div>
     );
 };

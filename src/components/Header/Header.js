@@ -73,9 +73,11 @@ export const Header = () => {
                     </motion.div>
                 </div>
                 <HeaderNav navItems={navItems} />
+                <HeaderBurgerButton isActive={isActive} setIsActive={setIsActive} />
+                <AnimatePresence mode="wait">
+                    {isActive && <HeaderMobileMenu navItems={navItems} setIsActive={setIsActive} pathname={pathname} />}
+                </AnimatePresence>
             </div>
-            <HeaderBurgerButton isActive={isActive} setIsActive={setIsActive} />
-            <AnimatePresence mode="wait">{isActive && <HeaderMobileMenu navItems={navItems} setIsActive={setIsActive} pathname={pathname} />}</AnimatePresence>
         </motion.header>
     );
 };
