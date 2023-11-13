@@ -61,6 +61,8 @@ export const HomeRealisations = ({ realisationsToShow }) => {
     const cursor = useRef(null);
     const cursorLabel = useRef(null);
 
+    console.log(realisationsToShow);
+
     let xMoveContainer = useRef(null);
     let yMoveContainer = useRef(null);
     let xMoveCursor = useRef(null);
@@ -127,7 +129,7 @@ export const HomeRealisations = ({ realisationsToShow }) => {
                     className="projects"
                 >
                     <div className="realisations-list">
-                        {projects.map((project, index) => {
+                        {/* {projects.map((project, index) => {
                             return (
                                 <HomeRealisationsItem
                                     index={index}
@@ -138,6 +140,9 @@ export const HomeRealisations = ({ realisationsToShow }) => {
                                     key={index}
                                 />
                             );
+                        })} */}
+                        {realisationsToShow.map((rea, index) => {
+                            return <HomeRealisationsItem index={index} rea={rea?.fields} manageModal={manageModal} key={index} />;
                         })}
                     </div>
 
@@ -150,11 +155,15 @@ export const HomeRealisations = ({ realisationsToShow }) => {
                             className="modal-container"
                         >
                             <div style={{ top: index * -100 + '%' }} className="modal-slider">
-                                {projects.map((project, index) => {
-                                    const { src, color } = project;
+                                {realisationsToShow.map((rea, index) => {
                                     return (
-                                        <div className="modal" style={{ backgroundColor: color }} key={`modal_${index}`}>
-                                            <Image src={`/images/${src}`} width={300} height={0} alt="image" />
+                                        <div className="modal" style={{ backgroundColor: rea?.fields.color }} key={`modal_${index}`}>
+                                            <Image
+                                                src={`https:${rea?.fields.cover.fields.file.url}`}
+                                                width={rea?.fields.cover.fields.file.details.image.width}
+                                                height={rea?.fields.cover.fields.file.details.image.height}
+                                                alt={rea?.fields.title}
+                                            />
                                         </div>
                                     );
                                 })}
