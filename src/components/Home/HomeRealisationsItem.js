@@ -8,7 +8,7 @@ export const HomeRealisationsItem = ({ index, manageModal, rea }) => {
     return (
         <ScaleIn>
             <Link
-                href={`realisations/${rea?.link}`}
+                href={`realisations/${rea?.slug}`}
                 onMouseEnter={(e) => {
                     manageModal(true, index, e.clientX, e.clientY);
                 }}

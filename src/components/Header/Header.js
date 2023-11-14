@@ -8,6 +8,7 @@ import { useEffect, useRef, useState } from 'react';
 import { HeaderBurgerButton } from './HeaderBurgerButton';
 import HeaderMobileMenu from './HeaderMobileMenu';
 import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 
 export const Header = () => {
     const [isActive, setIsActive] = useState(false);
@@ -51,7 +52,7 @@ export const Header = () => {
         <motion.header className="sticky top-0 z-50 overflow-hidden w-full">
             <div className="header-overlay" style={{ opacity: dynamicOpacity }}></div>
             <div className="header-wrapper container flex justify-between items-center py-3">
-                <div className="header-logo flex items-center gap-2">
+                <Link href="/" className="header-logo flex items-center gap-2">
                     <motion.div
                         // ref={logoRef}
                         className="header-logo-image transition-all"
@@ -63,7 +64,7 @@ export const Header = () => {
                         <Image src="/logo.svg" alt="Logo Graph and Co" width={50} height={50} priority />
                     </motion.div>
                     <motion.div
-                        className="header-logo-title text-white font-title min-w-max"
+                        className="header-logo-title text-white font-normal font-title min-w-max"
                         style={{
                             fontSize: logoFontSize,
                             // opacity: scrollYProgress,
@@ -71,7 +72,7 @@ export const Header = () => {
                     >
                         Graph & Co
                     </motion.div>
-                </div>
+                </Link>
                 <HeaderNav navItems={navItems} />
                 <HeaderBurgerButton isActive={isActive} setIsActive={setIsActive} />
                 <AnimatePresence mode="wait">

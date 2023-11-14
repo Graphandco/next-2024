@@ -34,7 +34,7 @@ export const HeaderBurgerButton = ({ isActive, setIsActive }) => {
     return (
         <div
             ref={buttonRef}
-            className={`header-burger sm:hidden scale-[0.7]  ${isActive && 'open'}`}
+            className={`header-burger sm:hidden scale-[0.7]  ${isActive ? 'open' : 'close'}`}
             onClick={() => {
                 setIsActive(!isActive);
             }}
