@@ -14,10 +14,15 @@
         gap: 20px;
     }
     h1 {
-        padding-top: 0;
+        // padding-top: 0;
         padding-left: 0;
         &:before {
             content: none;
+        }
+        span {
+            font-size: clamp(50px, 20px + 5vw, 80px);
+            text-transform: none;
+            line-height: 0.8;
         }
     }
     .hero-subtitle {

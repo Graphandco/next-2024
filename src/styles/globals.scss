@@ -89,14 +89,14 @@ h3 {
 //     }
 // }
 h1 {
-    text-transform: uppercase;
     display: inline-block;
-    font-size: clamp(38px, 28px + 2vw, 50px);
     padding-block: 2rem;
     padding-left: 1rem;
     position: relative;
 
     span {
+        text-transform: uppercase;
+        font-size: clamp(38px, 28px + 2vw, 50px);
         letter-spacing: 0.15rem;
         display: block;
         margin: 0 auto;

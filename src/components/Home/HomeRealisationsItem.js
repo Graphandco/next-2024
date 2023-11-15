@@ -22,14 +22,14 @@ export const HomeRealisationsItem = ({ index, manageModal, rea }) => {
                         <h2>{rea?.title}</h2>
                         <p>{rea?.description}</p>
                     </div>
-                    <div className="home-project-logo">
+                    {/* <div className="home-project-logo">
                         <Image
                             src={`https:${rea?.logo.fields.file.url}`}
                             width={rea?.logo.fields.file.details.image.width}
                             height={rea?.logo.fields.file.details.image.height}
                             alt={rea?.title}
                         />
-                    </div>
+                    </div> */}
                 </div>
             </Link>
         </ScaleIn>
