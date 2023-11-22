@@ -31,6 +31,7 @@ $breakpoints: (
 @import 'header';
 @import 'realisations';
 @import 'home-hero';
+@import 'home_competences';
 @import 'home-realisations';
 @import 'contact';
 
@@ -157,5 +158,27 @@ a {
     font-weight: 600;
     &:hover {
         color: var(--primary);
+    }
+}
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    span {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        a {
+            font-weight: 300;
+        }
+        &.breadcrumb-item a {
+            text-transform: capitalize;
+        }
+        &.active a {
+            pointer-events: none;
+            color: var(--text-color);
+            font-size: 20px;
+        }
     }
 }

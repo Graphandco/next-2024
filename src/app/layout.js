@@ -1,6 +1,7 @@
 // import { Inter } from 'next/font/google';
 import '@/styles/globals.scss';
 import { Header } from '@/components/Header/Header';
+// import FilAriane from '@/components/FilAriane';
 // import { RealisationsProvider } from './context/RealisationsContext';
 
 // const inter = Inter({ subsets: ['latin'] });
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
             {/* <RealisationsProvider> */}
             <body>
                 <Header />
+                {/* <FilAriane /> */}
                 {children}
             </body>
             {/* </RealisationsProvider> */}

@@ -1,0 +1,12 @@
+.home-competences-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @include mq(mobile) {
+        grid-template-columns: 1fr;
+    }
+}
+.home-atouts-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}

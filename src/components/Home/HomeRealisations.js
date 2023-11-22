@@ -61,7 +61,7 @@ export const HomeRealisations = ({ realisationsToShow }) => {
     const cursor = useRef(null);
     const cursorLabel = useRef(null);
 
-    console.log(realisationsToShow);
+    // console.log(realisationsToShow);
 
     let xMoveContainer = useRef(null);
     let yMoveContainer = useRef(null);
