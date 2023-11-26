@@ -14,8 +14,8 @@ export const HomeAtouts = ({ atouts }) => {
         <div className="home-atouts">
             <h3>Les atouts de votre site</h3>
             <div className="home-atouts-wrapper">
-                {atouts.items.map((atout, index) => {
-                    const { picto, title, description } = atout.fields;
+                {atouts?.items?.map((atout, index) => {
+                    const { picto, title, description } = atout?.fields;
                     let Picto = pictosNames[picto];
                     return (
                         <div className="atout-item" key={index}>

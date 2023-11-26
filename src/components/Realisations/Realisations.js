@@ -12,7 +12,7 @@ export const Realisations = ({ realisations, realisationsText }) => {
                 </h1>
             </div>
             <div className="realisations-header">
-                <div className="realisations-description bg-white/5 p-5">{documentToReactComponents(realisationsText.fields.content)}</div>
+                <div className="realisations-description bg-white/5 p-5">{documentToReactComponents(realisationsText?.fields?.content)}</div>
                 <div className="realisations-cta bg-primary h-full flex flex-col justify-center items-center p-5">
                     <div className="realisations-cta-title mb-3 text-secondary">Envie d'échanger sur votre projet ?</div>
                     <Button secondary>
@@ -21,7 +21,7 @@ export const Realisations = ({ realisations, realisationsText }) => {
                 </div>
             </div>
             <div className="realisations-grid">
-                {realisations.items.map((realisation, index) => (
+                {realisations?.items?.map((realisation, index) => (
                     <RealisationsCard key={index} realisation={realisation} />
                 ))}
             </div>

@@ -141,7 +141,7 @@ export const HomeRealisations = ({ realisationsToShow }) => {
                                 />
                             );
                         })} */}
-                        {realisationsToShow.map((rea, index) => {
+                        {realisationsToShow?.map((rea, index) => {
                             return <HomeRealisationsItem index={index} rea={rea?.fields} manageModal={manageModal} key={index} />;
                         })}
                     </div>
@@ -155,7 +155,7 @@ export const HomeRealisations = ({ realisationsToShow }) => {
                             className="modal-container"
                         >
                             <div style={{ top: index * -100 + '%' }} className="modal-slider">
-                                {realisationsToShow.map((rea, index) => {
+                                {realisationsToShow?.map((rea, index) => {
                                     return (
                                         <div className="modal" style={{ backgroundColor: rea?.fields.color }} key={`modal_${index}`}>
                                             <Image
