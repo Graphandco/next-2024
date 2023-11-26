@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export const RealisationsCard = ({ realisation }) => {
-    const { title, slug, logo, cover, featured, description } = realisation.fields;
+    const { title, slug, logo, cover, featured, description } = realisation?.fields;
     const coverURL = `https:${realisation.fields.cover.fields.file.url}`;
     const coverWidth = realisation.fields.cover.fields.file.details.image.width;
     const coverHeight = realisation.fields.cover.fields.file.details.image.height;
