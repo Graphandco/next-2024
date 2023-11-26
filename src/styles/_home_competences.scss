@@ -1,12 +1,36 @@
-.home-competences-wrapper {
+.home-competences {
+    padding-block: 2rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 2rem;
     @include mq(mobile) {
         grid-template-columns: 1fr;
     }
 }
+
 .home-atouts-wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+
+    .atout-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        svg {
+            color: var(--primary);
+            font-size: 1.5rem;
+        }
+        .atout-title {
+            color: white;
+            font-size: 1.5rem;
+            margin-top: 1rem;
+        }
+        .atout-description {
+            font-size: 1.1rem;
+            line-height: 1.2rem;
+        }
+    }
 }

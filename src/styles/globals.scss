@@ -58,6 +58,7 @@ body {
     font-family: var(--text-font);
     font-size: 19px;
     color: var(--text-color);
+    min-height: 100vh;
     min-height: 100dvh;
     background: linear-gradient(to bottom, var(--secondary), black) var(--secondary);
     // background-color: var(--secondary);
@@ -131,6 +132,14 @@ h1 {
 }
 
 /* Animate Background Image */
+
+.gradient-text {
+    display: inline-block;
+    background: linear-gradient(to right, var(--primary), white, var(--primary));
+    // background-size: 300% 300%;
+    background-clip: text;
+    color: transparent;
+}
 
 @keyframes aitf {
     0% {
