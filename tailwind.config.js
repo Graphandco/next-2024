@@ -26,7 +26,8 @@ module.exports = {
         container: {
             center: true,
             padding: {
-                DEFAULT: 'clamp(1rem, 10px + 2vw, 3rem)',
+                // DEFAULT: 'clamp(1rem, 10px + 2vw, 3rem)',
+                DEFAULT: '5vw',
                 // sm: "2rem",
                 // lg: "4rem",
                 // xl: "5rem",

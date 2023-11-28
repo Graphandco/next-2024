@@ -9,7 +9,6 @@ export const HomeAtouts = ({ atouts }) => {
         mobile: FaMobileAlt,
     };
 
-    console.log(atouts.items);
     return (
         <div className="home-atouts">
             <h3>Les atouts de votre site</h3>

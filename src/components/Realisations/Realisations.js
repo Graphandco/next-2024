@@ -4,6 +4,7 @@ import { RealisationsCard } from './RealisationsCard';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 export const Realisations = ({ realisations, realisationsText }) => {
+    // console.log(realisationsText);
     return (
         <section id="realisations">
             <div className="container">

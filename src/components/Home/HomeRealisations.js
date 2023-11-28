@@ -7,36 +7,36 @@ import { HomeRealisationsItem } from './HomeRealisationsItem';
 import Button from '../UI/Button';
 import Link from 'next/link';
 
-const projects = [
-    {
-        title: 'Hola Maté',
-        desc: 'Boutique de Maté',
-        src: 'cover-hola-mate.jpg',
-        color: '#2B4D28',
-        link: 'hola-mate',
-    },
-    {
-        title: 'Bomot',
-        desc: 'Écriture & communication',
-        src: 'cover-bomot.jpg',
-        color: '#8a8a8a',
-        link: 'bomot',
-    },
-    {
-        title: 'Willow Tarot',
-        desc: 'Guidance personnelle',
-        src: 'cover-willow.jpg',
-        color: '#1D2D29',
-        link: 'willow-tarot',
-    },
-    {
-        title: 'Loïde Guitare',
-        desc: 'Créateur de guitares',
-        src: 'cover-loide.jpg',
-        color: '#171a25',
-        link: 'loide-guitare',
-    },
-];
+// const projects = [
+//     {
+//         title: 'Hola Maté',
+//         desc: 'Boutique de Maté',
+//         src: 'cover-hola-mate.jpg',
+//         color: '#2B4D28',
+//         link: 'hola-mate',
+//     },
+//     {
+//         title: 'Bomot',
+//         desc: 'Écriture & communication',
+//         src: 'cover-bomot.jpg',
+//         color: '#8a8a8a',
+//         link: 'bomot',
+//     },
+//     {
+//         title: 'Willow Tarot',
+//         desc: 'Guidance personnelle',
+//         src: 'cover-willow.jpg',
+//         color: '#1D2D29',
+//         link: 'willow-tarot',
+//     },
+//     {
+//         title: 'Loïde Guitare',
+//         desc: 'Créateur de guitares',
+//         src: 'cover-loide.jpg',
+//         color: '#171a25',
+//         link: 'loide-guitare',
+//     },
+// ];
 
 const scaleAnimation = {
     initial: { scale: 0, x: '-50%', y: '-50%' },
