@@ -95,28 +95,39 @@ h1 {
     padding-block: 2rem;
     padding-left: 1rem;
     position: relative;
+    text-transform: uppercase;
+    font-size: clamp(38px, 28px + 2vw, 50px);
+    letter-spacing: 0.15rem;
+    text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
+    line-height: 1;
 
     span {
         text-transform: uppercase;
         font-size: clamp(38px, 28px + 2vw, 50px);
         letter-spacing: 0.15rem;
-        display: block;
+        display: inline-block;
         margin: 0 auto;
         text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
         line-height: 1;
-
-        /* Clip Background Image */
-        background: url(bg-h1.png) repeat-y;
-        -webkit-background-clip: text;
+        // background: linear-gradient(to right, #a855f7, #ec4899, #eab308, #ec4899, #a855f7, #ec4899, #eab308);
+        background: linear-gradient(to right, var(--primary), white, var(--primary), white, var(--primary), white, var(--primary));
+        background-size: 300% 300%;
         background-clip: text;
+        color: transparent;
+        animation: gradient 6s linear infinite;
 
-        /* Animate Background Image */
-        -webkit-text-fill-color: transparent;
-        -webkit-animation: aitf 80s linear infinite;
+        // /* Clip Background Image */
+        // background: url(bg-h1.png) repeat-y;
+        // -webkit-background-clip: text;
+        // background-clip: text;
 
-        /* Activate hardware acceleration for smoother animations */
-        -webkit-transform: translate3d(0, 0, 0);
-        -webkit-backface-visibility: hidden;
+        // /* Animate Background Image */
+        // -webkit-text-fill-color: transparent;
+        // -webkit-animation: aitf 80s linear infinite;
+
+        // /* Activate hardware acceleration for smoother animations */
+        // -webkit-transform: translate3d(0, 0, 0);
+        // -webkit-backface-visibility: hidden;
     }
 
     &:before {
@@ -133,16 +144,14 @@ h1 {
 
 /* Animate Background Image */
 // From mac
-.gradient-text {
-    display: inline-block;
-    background: linear-gradient(to right, var(--primary), white, var(--primary));
-    // background-size: 300% 300%;
-    background: linear-gradient(to right, #a855f7, #ec4899, #eab308, #ec4899, #a855f7, #ec4899, #eab308);
-    background-size: 300% 300%;
-    background-clip: text;
-    color: transparent;
-    animation: gradient 6s linear infinite;
-}
+// .gradient-text {
+//     // background: linear-gradient(to right, #a855f7, #ec4899, #eab308, #ec4899, #a855f7, #ec4899, #eab308);
+//     background: linear-gradient(to right, var(--primary), white, var(--primary), white, var(--primary), white, var(--primary));
+//     background-size: 300% 300%;
+//     background-clip: text;
+//     color: transparent;
+//     animation: gradient 6s linear infinite;
+// }
 
 @keyframes gradient {
     0% {
