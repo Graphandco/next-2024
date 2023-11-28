@@ -132,13 +132,25 @@ h1 {
 }
 
 /* Animate Background Image */
-
+// From mac
 .gradient-text {
     display: inline-block;
     background: linear-gradient(to right, var(--primary), white, var(--primary));
     // background-size: 300% 300%;
+    background: linear-gradient(to right, #a855f7, #ec4899, #eab308, #ec4899, #a855f7, #ec4899, #eab308);
+    background-size: 300% 300%;
     background-clip: text;
     color: transparent;
+    animation: gradient 6s linear infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
 }
 
 @keyframes aitf {
