@@ -1,4 +1,5 @@
 import React from 'react';
+import { Accordion } from '@szhsin/react-accordion';
 import Accordeon from '../Accordeon';
 
 export const PrestationsFAQ = () => {
@@ -10,11 +11,13 @@ export const PrestationsFAQ = () => {
     ];
     return (
         <section id="faq">
-            {questions.map((question, index) => (
-                <Accordeon key={index} question={question.q}>
-                    {question.r}
-                </Accordeon>
-            ))}
+            <Accordion transition transitionTimeout={250}>
+                {questions.map((question, index) => (
+                    <Accordeon header="What is Lorem Ipsum?" initialEntered>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </Accordeon>
+                ))}
+            </Accordion>
         </section>
     );
 };

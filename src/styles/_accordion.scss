@@ -1,0 +1,39 @@
+.accordion {
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    margin-top: 1rem;
+    .chevron {
+        margin-left: auto;
+        transition: transform 0.25s cubic-bezier(0, 0, 0, 1);
+    }
+    .accordion-btn {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+        padding: 1rem;
+        font-size: 1rem;
+        text-align: left;
+        color: #007bff;
+        background-color: transparent;
+        border: none;
+        &:hover {
+            background-color: #f3f3f3;
+        }
+        &.expanded {
+            background-color: #e7e7e7;
+            .chevron {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    .accordion-content {
+        transition: height 0.25s cubic-bezier(0, 0, 0, 1);
+    }
+
+    .accordion-panel {
+        padding: 1rem;
+    }
+}
