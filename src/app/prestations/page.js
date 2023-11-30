@@ -1,5 +1,5 @@
-import { Prestations } from '@/components/Prestations/Prestations';
 import { client } from '@/lib/contentful.js';
+import { PrestationsFAQ } from './PrestationsFAQ';
 
 const PrestationsPage = async () => {
     const questionsList = await client.getEntry('3bBgpDjfQgpKj7U8CyObu3');
@@ -11,7 +11,7 @@ const PrestationsPage = async () => {
                 <h1>
                     <span>Prestations</span>
                 </h1>
-                <Prestations />
+                <PrestationsFAQ />
             </div>
         </section>
     );
