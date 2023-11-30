@@ -11,69 +11,40 @@ const Accordion = ({ title, id, content, expanded, setExpanded }) => {
         gsap.to(ref.current.children[1], {
             height: isOpen ? 'auto' : 0,
         });
-        gsap.to(ref.current.children[0].children[1], {
+        gsap.to(ref.current.children[0].children[0], {
             rotate: isOpen ? 90 : 0,
             duration: 0.5,
         });
     }, [isOpen]);
 
     return (
-        <AccordionContainer ref={ref}>
+        <li ref={ref} className={`accordion-item ${id === expanded ? 'expanded' : ''}`}>
             <AccordionHeader onClick={() => setExpanded(id === expanded ? -1 : id)}>
-                <h3>{title}</h3>
                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={4} d="M15 19l-7-7 7-7" />
                 </svg>
+                <h3>{title}</h3>
             </AccordionHeader>
-            <AccordionContent>
+            <div className="accordion-content">
                 <p dangerouslySetInnerHTML={{ __html: content }}></p>
-            </AccordionContent>
-        </AccordionContainer>
+            </div>
+        </li>
     );
 };
 
 export default Accordion;
 
-const AccordionContainer = styled.li`
-    width: 100%;
-    height: auto;
-    margin-bottom: 0.5rem;
-    padding: 1rem;
-    cursor: pointer;
-`;
-
 const AccordionHeader = styled.div`
-    width: 100%;
-    height: 50px;
-    padding: 0.5rem;
-    box-sizing: border-box;
-    border-radius: 10px 10px 0 0;
-    display: flex;
-    justify-content: flex-start;
-
+    display: grid;
+    grid-template-columns: 1.5rem 1fr;
+    align-items: center;
+    gap: 1.5rem;
     h3 {
         padding: 0;
         margin: 0;
         color: #f4f5ff;
-    }
-
-    svg {
-        width: 2rem;
-        height: auto;
-        margin-left: auto;
-    }
-`;
-const AccordionContent = styled.div`
-    width: 100%;
-    height: 5px;
-    box-sizing: border-box;
-    overflow: hidden;
-
-    p {
-        padding: 1rem;
-        width: 100%;
         font-size: 1.5rem;
-        font-weight: 500;
-        line-height: 168%;
+        font-weight: bold;
+        font-family: var(--text-font);
     }
 `;
