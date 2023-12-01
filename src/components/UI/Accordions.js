@@ -2,7 +2,7 @@
 import React, { useState, useRef } from 'react';
 import Accordion from './Accordion';
 const Accordions = ({ questions }) => {
-    const [expanded, setExpanded] = useState(999);
+    const [expanded, setExpanded] = useState(0);
     return (
         <ul>
             {questions.map((question, index) => (

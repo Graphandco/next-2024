@@ -3,7 +3,6 @@ import { PrestationsFAQ } from './PrestationsFAQ';
 
 const PrestationsPage = async () => {
     const questionsList = await client.getEntry('3bBgpDjfQgpKj7U8CyObu3');
-    console.log(questionsList.fields);
 
     return (
         <section id="prestations">
@@ -11,7 +10,7 @@ const PrestationsPage = async () => {
                 <h1>
                     <span>Prestations</span>
                 </h1>
-                <PrestationsFAQ />
+                <PrestationsFAQ questions={questionsList.fields} />
             </div>
         </section>
     );
