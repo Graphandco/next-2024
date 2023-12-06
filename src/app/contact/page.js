@@ -7,9 +7,7 @@ const ContactPage = async () => {
     return (
         <section id="contact">
             <div className="container">
-                <h1>
-                    <span>Contact</span>
-                </h1>
+                <h1>Contact</h1>
                 <div>{documentToReactComponents(contactText.fields.content)}</div>
                 <ContactForm />
             </div>

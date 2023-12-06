@@ -11,7 +11,7 @@ export const HomeAtouts = ({ atouts }) => {
 
     return (
         <div className="home-atouts">
-            <h3>Les atouts de votre site</h3>
+            <h2>Les atouts de votre site</h2>
             <div className="home-atouts-wrapper">
                 {atouts?.items?.map((atout, index) => {
                     const { picto, title, description } = atout?.fields;

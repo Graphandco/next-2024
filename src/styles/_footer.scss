@@ -1,0 +1,21 @@
+.footer-before {
+    min-height: 300px;
+    margin-bottom: 150px;
+    overflow: hidden;
+}
+.circle-container {
+    background-color: white;
+    position: relative;
+    margin-top: 50px;
+    .circle {
+        height: 1000%;
+        width: 120%;
+        left: -10%;
+        border-radius: 0 0 50% 50%;
+        background-color: var(--primary);
+
+        z-index: 1;
+        position: absolute;
+        box-shadow: 0px 60px 30px rgba(0, 0, 0, 0.25);
+    }
+}

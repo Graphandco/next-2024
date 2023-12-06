@@ -11,9 +11,7 @@ const RealisationsPage = async () => {
     return (
         <section id="realisations">
             <div className="container">
-                <h1>
-                    <span>Réalisations</span>
-                </h1>
+                <h1>Réalisations</h1>
             </div>
             <div className="realisations-header">
                 <div className="realisations-description bg-white/5 p-5">{documentToReactComponents(realisationsText?.fields?.content)}</div>

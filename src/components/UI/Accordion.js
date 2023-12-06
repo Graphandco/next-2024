@@ -42,7 +42,7 @@ const AccordionHeader = styled.div`
     display: grid;
     grid-template-columns: 1.5rem 1fr;
     align-items: center;
-    gap: 1.5rem;
+    gap: 2rem;
     h3 {
         padding: 0;
         margin: 0;

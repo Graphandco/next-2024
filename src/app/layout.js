@@ -1,6 +1,7 @@
 // import { Inter } from 'next/font/google';
 import '@/styles/globals.scss';
 import { Header } from '@/components/Header/Header';
+import Footer from '@/components/Footer/Footer';
 // import FilAriane from '@/components/FilAriane';
 // import { RealisationsProvider } from './context/RealisationsContext';
 
@@ -18,8 +19,11 @@ export default function RootLayout({ children }) {
             {/* <RealisationsProvider> */}
             <body>
                 <Header />
-                {/* <FilAriane /> */}
-                {children}
+                <main>
+                    {/* <FilAriane /> */}
+                    {children}
+                </main>
+                <Footer />
             </body>
             {/* </RealisationsProvider> */}
         </html>

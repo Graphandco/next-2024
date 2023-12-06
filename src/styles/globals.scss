@@ -36,6 +36,7 @@ $breakpoints: (
 @import 'faq';
 @import 'accordion';
 @import 'contact';
+@import 'footer';
 
 :root {
     --foreground-rgb: 0, 0, 0;
@@ -59,6 +60,7 @@ body {
     --title-font: 'MostraNuova2', sans-serif;
     font-family: var(--text-font);
     font-size: 19px;
+    line-height: 1.2;
     color: var(--text-color);
     min-height: 100vh;
     min-height: 100dvh;
@@ -93,44 +95,38 @@ h3 {
 //     }
 // }
 h1 {
-    display: inline-block;
+    position: relative;
+    margin: 0 auto;
     padding-block: 2rem;
     padding-left: 1rem;
-    position: relative;
     text-transform: uppercase;
     font-size: clamp(38px, 28px + 2vw, 50px);
     letter-spacing: 0.15rem;
-    text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
     line-height: 1;
+    text-transform: uppercase;
+    text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
+    display: inline-block;
+    // background: linear-gradient(to right, #a855f7, #ec4899, #eab308, #ec4899, #a855f7, #ec4899, #eab308);
+    background: linear-gradient(to right, var(--primary), white, var(--primary), white, var(--primary), white, var(--primary));
+    background-size: 300% 300%;
+    background-clip: text;
+    color: transparent;
+    animation: gradient 6s linear infinite;
 
-    span {
-        text-transform: uppercase;
-        font-size: clamp(38px, 28px + 2vw, 50px);
-        letter-spacing: 0.15rem;
-        display: inline-block;
-        margin: 0 auto;
-        text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
-        line-height: 1;
-        // background: linear-gradient(to right, #a855f7, #ec4899, #eab308, #ec4899, #a855f7, #ec4899, #eab308);
-        background: linear-gradient(to right, var(--primary), white, var(--primary), white, var(--primary), white, var(--primary));
-        background-size: 300% 300%;
-        background-clip: text;
-        color: transparent;
-        animation: gradient 6s linear infinite;
+    // span {
+    //     /* Clip Background Image */
+    //     background: url(bg-h1.png) repeat-y;
+    //     -webkit-background-clip: text;
+    //     background-clip: text;
 
-        // /* Clip Background Image */
-        // background: url(bg-h1.png) repeat-y;
-        // -webkit-background-clip: text;
-        // background-clip: text;
+    //     /* Animate Background Image */
+    //     -webkit-text-fill-color: transparent;
+    //     -webkit-animation: aitf 80s linear infinite;
 
-        // /* Animate Background Image */
-        // -webkit-text-fill-color: transparent;
-        // -webkit-animation: aitf 80s linear infinite;
-
-        // /* Activate hardware acceleration for smoother animations */
-        // -webkit-transform: translate3d(0, 0, 0);
-        // -webkit-backface-visibility: hidden;
-    }
+    //     /* Activate hardware acceleration for smoother animations */
+    //     -webkit-transform: translate3d(0, 0, 0);
+    //     -webkit-backface-visibility: hidden;
+    // }
 
     &:before {
         content: '';

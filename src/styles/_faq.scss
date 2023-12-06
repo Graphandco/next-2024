@@ -1,6 +1,7 @@
 .faq-wrapper {
     display: flex;
     align-items: flex-end;
+    gap: 2rem;
     img {
         @include mq(mobile) {
             display: none;

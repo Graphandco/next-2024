@@ -10,9 +10,7 @@ const RealisationPage = async ({ params }) => {
     }
     return (
         <section id="realisation" className="container">
-            <h1>
-                <span>{title}</span>
-            </h1>
+            <h1>{title}</h1>
             <div>{documentToReactComponents(content)}</div>
         </section>
     );

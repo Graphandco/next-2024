@@ -7,9 +7,7 @@ const PrestationsPage = async () => {
     return (
         <section id="prestations">
             <div className="container">
-                <h1>
-                    <span>Prestations</span>
-                </h1>
+                <h1>Prestations</h1>
                 <PrestationsFAQ questions={questionsList.fields} />
             </div>
         </section>
