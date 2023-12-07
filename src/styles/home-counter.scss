@@ -6,7 +6,7 @@
         grid-template-columns: repeat(4, 1fr);
         gap: 2rem;
         @include mq(mobile) {
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(2, 1fr);
         }
     }
     &-item {
