@@ -33,6 +33,7 @@ $breakpoints: (
 @import 'home-hero';
 @import 'home_competences';
 @import 'home-realisations';
+@import 'home-counter';
 @import 'faq';
 @import 'accordion';
 @import 'contact';
@@ -60,7 +61,7 @@ body {
     --title-font: 'MostraNuova2', sans-serif;
     font-family: var(--text-font);
     font-size: 19px;
-    line-height: 1.2;
+    line-height: 1.5;
     color: var(--text-color);
     min-height: 100vh;
     min-height: 100dvh;

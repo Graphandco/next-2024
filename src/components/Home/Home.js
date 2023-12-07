@@ -1,6 +1,7 @@
 import { HomeCompetences } from './HomeCompetences';
 import { HomeHero } from './HomeHero';
 import { HomeRealisations } from './HomeRealisations';
+import { HomeCounters } from './HomeCounters';
 import { client } from '@/lib/contentful.js';
 
 export const Home = async () => {
@@ -13,6 +14,7 @@ export const Home = async () => {
             <HomeHero />
             <HomeCompetences competencesText={competencesText} webmasterText={webmasterText} atouts={atouts} />
             <HomeRealisations realisationsToShow={realisationsToShow.items} />
+            <HomeCounters />
         </>
     );
 };

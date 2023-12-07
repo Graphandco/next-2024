@@ -1,0 +1,31 @@
+.counters {
+    padding-top: 2rem;
+    padding-inline: 5vw;
+    &-wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        @include mq(mobile) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+    &-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    &-number {
+        margin-top: 1rem;
+        min-height: 2rem;
+        font-size: 3rem;
+        color: white;
+    }
+    &-title {
+        font-size: 1.2rem;
+    }
+    svg {
+        fill: var(--primary);
+        font-size: 3rem;
+    }
+}
