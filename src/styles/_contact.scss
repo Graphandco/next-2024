@@ -1,49 +1,41 @@
 .contact-form {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
     align-items: center;
+    gap: 5vw;
+    @include mq(mobile) {
+        display: flex;
+        flex-direction: column-reverse;
+        img {
+            max-width: 200px;
+        }
+    }
     form {
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
         width: 100%;
+        padding: 2.5rem 3rem;
+        background-color: rgba(255, 255, 255, 0.03);
+        border-radius: 20px;
     }
     .form-group {
-        display: flex;
-        flex-direction: column;
-        .label-wrapper {
-            position: relative;
-            .form-error {
-                position: absolute;
-                top: 0;
-                right: 0;
-                height: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding-inline: 0.5rem;
-                border-radius: 0 5px 5px 0;
-                background-color: #a11414;
-                font-size: 16px;
-                color: white;
-            }
+        label {
+            font-style: italic;
+            font-size: 1rem;
         }
-        // .form-error {
-        //     background-color: #a11414;
-        //     color: white;
-        //     height: 25px;
-        //     font-size: 17px;
-        //     padding-inline: 0.5rem;
-        //     border-radius: 2px;
-        // }
+        &.rgpd label {
+            font-style: normal;
+            line-height: 1.4;
+        }
     }
-    label {
-        // color: var(--primary);
-        font-style: italic;
+    .form-error {
+        background: red;
+        color: white;
+        padding: 0.25rem 1rem;
+        margin-top: 0.5rem;
+        border-radius: 5px;
+        display: inline-block;
+        font-size: 1rem;
     }
-    // input,
-    // textarea {
-    //     padding: 0.8rem 1.2rem;
-    //     border-radius: 5px;
-    // }
 }
