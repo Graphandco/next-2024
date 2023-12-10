@@ -57,6 +57,7 @@ body {
     --primary: #f2ad0d;
     --secondary: hsl(208deg 88% 7%);
     --text-color: #92b0ca;
+    --text-color: hsl(273 11% 70% / 1);
     --text-font: 'MostraNuova', sans-serif;
     --title-font: 'MostraNuova2', sans-serif;
     font-family: var(--text-font);
@@ -67,10 +68,27 @@ body {
     min-height: 100dvh;
     background: linear-gradient(to bottom, var(--secondary), black) var(--secondary);
     // background-color: var(--secondary);
+    background-attachment: fixed;
+    // background-size: cover;
+    position: relative;
+    isolation: isolate;
+    &:after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-color: black;
+        opacity: 0.6;
+        z-index: -1;
+    }
+}
+ol {
+    list-style: auto;
+    padding: revert;
 }
 h1,
 h2,
-h3 {
+h3,
+h4 {
     color: white;
     font-family: var(--title-font);
 }
@@ -105,7 +123,7 @@ h1 {
     letter-spacing: 0.15rem;
     line-height: 1;
     text-transform: uppercase;
-    text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
+    // text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
     display: inline-block;
     // background: linear-gradient(to right, #a855f7, #ec4899, #eab308, #ec4899, #a855f7, #ec4899, #eab308);
     background: linear-gradient(to right, var(--primary), white, var(--primary), white, var(--primary), white, var(--primary));
@@ -178,6 +196,11 @@ h3 {
     font-size: clamp(25px, 20px + 2vw, 30px);
     line-height: 1.2;
     margin-bottom: 1rem;
+}
+h4 {
+    font-size: clamp(21px, 15px + 1.5vw, 25px);
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
 }
 p {
     margin-bottom: 1rem;

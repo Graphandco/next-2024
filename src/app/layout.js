@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
         <html lang="en">
             {/* <body className={inter.className}> */}
             {/* <RealisationsProvider> */}
-            <body>
+            <body style={{ backgroundImage: `url("bg.svg")` }}>
                 <Header />
                 <main>
                     {/* <FilAriane /> */}

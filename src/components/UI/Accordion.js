@@ -47,7 +47,7 @@ const AccordionHeader = styled.div`
         padding: 0;
         margin: 0;
         color: #f4f5ff;
-        font-size: 1.5rem;
+        font-size: clamp(1.2rem, 11px + 1vw, 1.5rem);
         font-weight: bold;
         font-family: var(--text-font);
     }

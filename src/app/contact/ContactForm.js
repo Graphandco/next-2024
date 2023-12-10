@@ -90,7 +90,7 @@ export const ContactForm = () => {
                     {errors.message && <div className="form-error">Le champ message est requis</div>}
                 </div>
 
-                <div className="flex items-center relative z-0 w-full mb-5 group form-group rgpd">
+                {/* <div className="flex items-center relative z-0 w-full mb-5 group form-group rgpd">
                     <div className="flex items-center">
                         <input id="link-checkbox" type="checkbox" value="" className="rounded-full w-4 h-4 mr-2 text-white bg-gray-100 border-none" />
 
@@ -99,6 +99,20 @@ export const ContactForm = () => {
                             <Link href="">Politique de Confidentialité</Link>
                         </label>
                     </div>
+                </div> */}
+
+                <div className="me-4 w-full form-group rgpd">
+                    <label className="rounded-checkbox centered" for="rgpd">
+                        <input type="checkbox" id="rgpd" required {...register('rgpd', { required: true })} />
+                        <span className="rounded-checkbox__outer">
+                            <span className="rounded-checkbox__inner"></span>
+                        </span>
+                        <span>
+                            En cochant cette case, vous acceptez d’être recontacté par email, conformément à notre{' '}
+                            <Link href="politique-confidentialite">Politique de Confidentialité</Link>
+                        </span>
+                    </label>
+                    {errors.rgpd && <div className="form-error">Merci d'accepter les termes de la politique de confidentialité</div>}
                 </div>
 
                 <Button onClick={handleSubmit(onSubmit)}>
