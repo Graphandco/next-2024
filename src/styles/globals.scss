@@ -46,6 +46,10 @@ $breakpoints: (
     --background-end-rgb: 255, 255, 255;
 }
 
+// ::-webkit-scrollbar {
+//     display: none;
+// }
+
 @media (prefers-color-scheme: dark) {
     :root {
         --foreground-rgb: 255, 255, 255;
@@ -53,7 +57,9 @@ $breakpoints: (
         --background-end-rgb: 0, 0, 0;
     }
 }
-
+html {
+    overflow-x: hidden;
+}
 body {
     --primary: #f2ad0d;
     --secondary: hsl(208deg 88% 7%);

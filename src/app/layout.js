@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
         <html lang="en">
             {/* <body className={inter.className}> */}
             {/* <RealisationsProvider> */}
-            <body style={{ backgroundImage: `url("bg.svg")` }}>
+            <body style={{ backgroundImage: `url("/bg.svg")` }} suppressHydrationWarning={true}>
                 <Header />
                 <main>
                     {/* <FilAriane /> */}
