@@ -20,40 +20,40 @@ const RealisationHeader = ({ title, content, cover }) => {
 
     const endValue = websiteContent.current?.offsetHeight * 0.75;
 
-    ScrollTrigger.create({
-        trigger: websiteContent.current,
-        start: '-0.1% top',
-        end: 'bottom bottom',
-        onEnter: () => {
-            gsap.set(websiteContent.current, { position: 'absolute', top: '195%' });
-            // gsap.set(websiteContent.current, { position: 'absolute' });
-        },
-        onLeaveBack: () => {
-            gsap.set(websiteContent.current, { position: 'fixed', top: '0' });
-        },
-    });
-
-    gsap.to('.img-holder', {
-        rotation: 0,
-        clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
-        ease: 'power2.inOut',
-        scrollTrigger: {
-            start: 'top top',
-            end: '+=200%',
-            scrub: 1,
-        },
-    });
-
-    gsap.to('.img-holder img', {
-        scale: 1,
-        ease: 'power2.inOut',
-        scrollTrigger: {
-            start: 'top top',
-            end: '+=200%',
-            scrub: 1,
-        },
-    });
     useEffect(() => {
+        ScrollTrigger.create({
+            trigger: websiteContent.current,
+            start: '-0.1% top',
+            end: 'bottom bottom',
+            onEnter: () => {
+                gsap.set(websiteContent.current, { position: 'absolute', top: '195%' });
+                // gsap.set(websiteContent.current, { position: 'absolute' });
+            },
+            onLeaveBack: () => {
+                gsap.set(websiteContent.current, { position: 'fixed', top: '0' });
+            },
+        });
+
+        gsap.to(imageHolder.current, {
+            rotation: 0,
+            clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+            ease: 'power2.inOut',
+            scrollTrigger: {
+                start: 'top top',
+                end: '+=200%',
+                scrub: 1,
+            },
+        });
+
+        gsap.to(imageHolderImage.current, {
+            scale: 1,
+            ease: 'power2.inOut',
+            scrollTrigger: {
+                start: 'top top',
+                end: '+=200%',
+                scrub: 1,
+            },
+        });
         gsap.to(lettersGroup1.current, {
             x: () => -innerWidth * 3,
             scale: 10,
