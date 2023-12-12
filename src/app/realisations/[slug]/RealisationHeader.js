@@ -32,6 +32,7 @@ const RealisationHeader = ({ title, content, cover }) => {
             gsap.set(websiteContent.current, { position: 'fixed', top: '0' });
         },
     });
+
     gsap.to('.img-holder', {
         rotation: 0,
         clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
