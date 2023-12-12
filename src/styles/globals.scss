@@ -29,13 +29,14 @@ $breakpoints: (
 @tailwind utilities;
 
 @import 'header';
-@import 'realisations';
 @import 'home-hero';
 @import 'home_competences';
 @import 'home-realisations';
 @import 'home-counter';
 @import 'faq';
 @import 'accordion';
+@import 'realisations';
+@import 'realisation';
 @import 'contact';
 @import 'footer';
 
@@ -77,7 +78,7 @@ body {
         position: absolute;
         inset: 0;
         background-color: black;
-        opacity: 0.6;
+        opacity: 0.4;
         z-index: -1;
     }
 }

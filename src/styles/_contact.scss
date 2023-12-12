@@ -18,6 +18,27 @@
         padding: 2.5rem 4vw;
         background-color: rgba(255, 255, 255, 0.03);
         border-radius: 20px;
+
+        .form-title {
+            text-align: center;
+            span {
+                position: relative;
+                color: white;
+                font-size: 1.6rem;
+                text-transform: uppercase;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    left: -0.8rem;
+                    bottom: 4px;
+                    width: 7px;
+                    aspect-ratio: 1;
+                    background-color: white;
+                    border-radius: 50%;
+                }
+            }
+        }
     }
     .form-group {
         label {
@@ -50,7 +71,7 @@
             align-items: center;
             gap: 1rem;
             padding: 3px;
-            background-color: rgba(#000, 0.1);
+            // background-color: rgba(#000, 0.1);
             border-radius: $heigth;
             input[type='checkbox'] {
                 display: none;

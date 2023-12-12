@@ -15,6 +15,9 @@ export const ContactForm = () => {
     return (
         <section id="contact-form" className="contact-form mt-12">
             <form>
+                <div className="form-title">
+                    <span>Nous écrire</span>
+                </div>
                 <div className="relative z-0 w-full mb-5 group form-group">
                     <input
                         type="text"
